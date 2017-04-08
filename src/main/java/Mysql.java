@@ -27,13 +27,19 @@ public class Mysql {
             Connection connection = DriverManager.getConnection(DB, USER, USERPW);
             Statement statement = connection.createStatement();
 
-           ResultSet resultSet = statement.executeQuery("SELECT * FROM user");
-           while(resultSet.next()) {
-                System.out.println("--------------------");
-                System.out.println(resultSet.getString("username"));
-                System.out.println(resultSet.getInt("id"));
-                System.out.println("--------------------");
-           }
+
+//           ResultSet resultSet = statement.executeQuery("SELECT * FROM user");
+//           while(resultSet.next()) {
+//                System.out.println("--------------------");
+//                System.out.println(resultSet.getString("username"));
+//                System.out.println(resultSet.getInt("id"));
+//                System.out.println("--------------------");
+//           }
+
+            statement.execute("INSERT INTO user(username, password, role, gender)" +
+                    " VALUES('oskarekasd5','mojetajnehaslo','admin','0')");
+            statement.execute("INSERT INTO user(username, password, role, gender)" +
+                    " VALUES('oskarekasd2','mojetajnehaslo','admin','0')");
 
         } catch (SQLException e) {
             e.printStackTrace();
