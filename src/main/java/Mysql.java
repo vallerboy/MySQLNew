@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class Mysql {
 
-    private static final String DB = "jdbc:mysql://5.135.218.27:3306/spring";
+    private static final String DB = "jdbc:mysql://5.135.218.27:3306/spring?useUnicode=true&characterEncoding=UTF-8";
     private static final String USER = "oskar";
     private static final String USERPW = "akademiakodu";
     private static final String DRIVER = "com.mysql.jdbc.Driver";
